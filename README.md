@@ -1,6 +1,6 @@
 # WP Genova WooCommerce
 - Customers can submit claims using a shortcode-based **claim form**.
-- Admins can configure API base URL, API key, and trigger type.
+- Admins can configure API base URL, API key, API secret, and trigger type.
 
 
 Built with **security** (API key encryption), **resilience** (retry queue with Action Scheduler), and **transparency** (logging + admin order columns).
@@ -14,9 +14,10 @@ Built with **security** (API key encryption), **resilience** (retry queue with A
 
 1. Upload the plugin folder `wp-genova-woocommerce` to `/wp-content/plugins/`.
 2. Activate the plugin via **Plugins → Installed Plugins**.
-3. Go to **WooCommerce → Genova Insurance** and configure:
-- Insurance API Base URL (e.g., `https://example.com/api/insurance`)
+3. Go to **WooCommerce → Genova Agency** and configure:
+- Insurance API Base URL (e.g., `https://genova.co.ke/api/v1`)
 - API Key
+- API Secret
 - Purchase Trigger (Order Processed or Payment Complete)
 
 
@@ -36,7 +37,7 @@ Built with **security** (API key encryption), **resilience** (retry queue with A
 
 
 ### Where does the insurance data come from?
-From your configured **Genova Insurance API** (`/plans`, `/purchase`, `/claim`).
+From your configured **Genova Agency API** (`/plans`, `/purchase`, `/claim`).
 
 
 ### How are API keys stored?
@@ -121,4 +122,4 @@ wp genova retry-failed
 
 
 ### 1.0.0
-Initial release — install to embed Genova insurance in WooCommerce checkout with claims support.
+Initial release — install to embed Genova Agency in WooCommerce checkout with claims support.
