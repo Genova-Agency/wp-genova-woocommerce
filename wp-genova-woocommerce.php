@@ -72,8 +72,8 @@ function wp_genova_decrypt($b64) {
 add_action('admin_menu', function () {
     add_submenu_page(
         'woocommerce',
-        __('Genova Insurance', 'wp-genova-woocommerce'),
-        __('Genova Insurance', 'wp-genova-woocommerce'),
+        __('Genova Agency', 'wp-genova-woocommerce'),
+        __('Genova Agency', 'wp-genova-woocommerce'),
         'manage_options',
         'wp-genova-settings',
         'wp_genova_settings_page'
@@ -103,13 +103,13 @@ function wp_genova_settings_page() {
     $decrypted_key = wp_genova_decrypt($opts['api_key']);
     ?>
     <div class="wrap">
-        <h1><?php esc_html_e('Genova Insurance Settings', 'wp-genova-woocommerce'); ?></h1>
+        <h1><?php esc_html_e('Genova Agency Settings', 'wp-genova-woocommerce'); ?></h1>
         <form method="post">
             <?php wp_nonce_field('wp_genova_save', 'wp_genova_settings_nonce'); ?>
             <table class="form-table">
                 <tr>
                     <th><label for="api_base"><?php esc_html_e('Insurance API Base URL', 'wp-genova-woocommerce'); ?></label></th>
-                    <td><input type="text" id="api_base" name="api_base" value="<?php echo esc_attr($opts['api_base']); ?>" style="width:400px" placeholder="https://example.com/api/insurance" /></td>
+                    <td><input type="text" id="api_base" name="api_base" value="<?php echo esc_attr($opts['api_base']); ?>" style="width:400px" placeholder="https://genova.co.ke/api/v1" /></td>
                 </tr>
                 <tr>
                     <th><label for="api_key"><?php esc_html_e('API Key (optional)', 'wp-genova-woocommerce'); ?></label></th>
