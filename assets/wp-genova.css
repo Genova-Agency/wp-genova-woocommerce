@@ -1,0 +1,7 @@
+/**
+ * Author:      Evans Wanguba
+ * Text Domain: wp-genova.css
+ */
+.wp-genova-insurance select { max-width: 360px; }
+.wp-genova-insurance h3 { margin-top: 0; }
+.wp-genova-claim-form input, .wp-genova-claim-form textarea { width: 100%; }
